@@ -11,6 +11,8 @@ Pizza.prototype.calcPizza = function (Pizza) {
 		cost = 20;
 	} else if (this.size === 'Medium') {
 		cost = 10;
+	} else if (this.size === 'Small') {
+		cost = 5;
 	}
 
 	return cost;
@@ -20,8 +22,9 @@ Pizza.prototype.calcPizza = function (Pizza) {
 $(document).ready(function () {
 	$('#formOne').submit(function () {
 		event.preventDefault();
-		let userInput = $('#userInput').val();
-		$('.userResults').append(userInput);
-		numberTo(userInput);
+		let userToppings = $('#toppings').val();
+		$('.userResults2').append(userToppings);
+		console.log(userToppings);
+		// numberTo(userInput);
 	});
 });
