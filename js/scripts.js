@@ -24,8 +24,15 @@ $(document).ready(function () {
 		event.preventDefault();
 		let userToppings = $('#userToppings').val();
 		let userSize = $('#userSize').val();
-		$('.userResults2').empty().append(userSize);
-		$('.userResults2').append(userToppings);
+		$('.userResults2')
+			.empty()
+			.append(
+				'You ordered a ' +
+					userToppings +
+					' pizza with the following toppings: ' +
+					userSize +
+					''
+			);
 		let userPizza = new Pizza();
 		userPizza.size = userSize;
 		userPizza.toppings = userToppings;
