@@ -29,6 +29,7 @@ $(document).ready(function () {
 		let userPizza = new Pizza();
 		userPizza.size = userSize;
 		userPizza.toppings = userToppings;
+		$('.userResults').show();
 		console.log(userPizza);
 		// console.log(userToppings);
 		// userPizza.calcPizza(userPizza);
