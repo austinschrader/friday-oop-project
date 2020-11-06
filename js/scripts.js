@@ -1,3 +1,21 @@
+// Business Logic
+function Pizza() = {
+	this.toppings = [];
+	this.size = []
+}
+
+Pizza.prototype.calcPizza() {
+	let cost = 0;
+	
+	if (this.size === "Large") {
+		cost = 20;
+	} else if (this.size === "Medium") {
+		cost = 10;
+	}
+
+	return cost
+}
+
 // Front End Logic
 $(document).ready(function () {
 	$('#formOne').submit(function () {
