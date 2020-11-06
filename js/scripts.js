@@ -1,20 +1,20 @@
 // Business Logic
 function Pizza() {
 	this.toppings = [];
-	this.size = []
+	this.size = [];
 }
 
-Pizza.prototype.calcPizza() {
+Pizza.prototype.calcPizza = function (Pizza) {
 	let cost = 0;
-	
-	if (this.size === "Large") {
+
+	if (this.size === 'Large') {
 		cost = 20;
-	} else if (this.size === "Medium") {
+	} else if (this.size === 'Medium') {
 		cost = 10;
 	}
 
-	return cost
-}
+	return cost;
+};
 
 // Front End Logic
 $(document).ready(function () {
