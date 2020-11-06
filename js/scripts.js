@@ -1,7 +1,7 @@
 // Business Logic
-function Pizza() {
+function Pizza(toppings, size) {
 	this.toppings = [];
-	this.size = [];
+	this.size = '';
 }
 
 Pizza.prototype.calcPizza = function (Pizza) {
@@ -26,7 +26,11 @@ $(document).ready(function () {
 		let userSize = $('#userSize').val();
 		$('.userResults2').empty().append(userSize);
 		$('.userResults2').append(userToppings);
-		console.log(userToppings);
-		// numberTo(userInput);
+		let userPizza = new Pizza();
+		userPizza.size = userSize;
+		userPizza.toppings = userToppings;
+		console.log(userPizza);
+		// console.log(userToppings);
+		// userPizza.calcPizza(userPizza);
 	});
 });
