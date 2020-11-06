@@ -20,6 +20,18 @@ Pizza.prototype.calcPizza = function (Pizza) {
 
 let userPizza = new Pizza();
 
+function domLogUserInput(userToppings, userSize) {
+	$('.userResultsDetail')
+		.empty()
+		.append(
+			'You ordered a ' +
+				userToppings +
+				' pizza with the following toppings: ' +
+				userSize +
+				''
+		);
+}
+
 // Front End Logic
 $(document).ready(function () {
 	$('#formOne').submit(function () {
@@ -28,18 +40,11 @@ $(document).ready(function () {
 		let userToppings = $('#userToppings').val();
 		let userSize = $('#userSize').val();
 
-		$('.userResultsDetail')
-			.empty()
-			.append(
-				'You ordered a ' +
-					userToppings +
-					' pizza with the following toppings: ' +
-					userSize +
-					''
-			);
+		domLogUserInput(userToppings, userSize);
 
 		userPizza.size = userSize;
 		userPizza.toppings = userToppings;
+
 		$('.userResults').show();
 	});
 });
