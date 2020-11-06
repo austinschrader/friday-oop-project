@@ -18,13 +18,17 @@ Pizza.prototype.calcPizza = function (Pizza) {
 	return cost;
 };
 
+let userPizza = new Pizza();
+
 // Front End Logic
 $(document).ready(function () {
 	$('#formOne').submit(function () {
 		event.preventDefault();
+
 		let userToppings = $('#userToppings').val();
 		let userSize = $('#userSize').val();
-		$('.userResults2')
+
+		$('.userResultsDetail')
 			.empty()
 			.append(
 				'You ordered a ' +
@@ -33,12 +37,9 @@ $(document).ready(function () {
 					userSize +
 					''
 			);
-		let userPizza = new Pizza();
+
 		userPizza.size = userSize;
 		userPizza.toppings = userToppings;
 		$('.userResults').show();
-		console.log(userPizza);
-		// console.log(userToppings);
-		// userPizza.calcPizza(userPizza);
 	});
 });
