@@ -4,6 +4,8 @@ function Pizza(toppings, size) {
 	this.size = '';
 }
 
+let userPizza = new Pizza();
+
 Pizza.prototype.calcPizza = function (Pizza) {
 	let cost = 0;
 
@@ -19,8 +21,6 @@ Pizza.prototype.calcPizza = function (Pizza) {
 
 	return cost;
 };
-
-let userPizza = new Pizza();
 
 function domLogUserInput(userToppings, userSize, cost) {
 	$('.userResultsDetail')
