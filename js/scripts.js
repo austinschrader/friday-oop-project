@@ -22,7 +22,9 @@ Pizza.prototype.calcPizza = function (Pizza) {
 $(document).ready(function () {
 	$('#formOne').submit(function () {
 		event.preventDefault();
-		let userToppings = $('#toppings').val();
+		let userToppings = $('#userToppings').val();
+		let userSize = $('#userSize').val();
+		$('.userResults2').empty().append(userSize);
 		$('.userResults2').append(userToppings);
 		console.log(userToppings);
 		// numberTo(userInput);

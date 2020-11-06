@@ -12,19 +12,23 @@
 			<form id="formOne">
 				<p>Please use the form below to complete your pizza order.</p>
 				<div class="form-group">
-					<label for="toppings"
-						>Please enter the toppings you would like separate by a
-						comma:</label
+					<label for="userToppings"
+						>Please enter the size of pizza that you would like</label
 					>
-					<input id="toppings" type="text" />
+					<select id="userToppings" name="pizzaSize">
+						<option value="small">Small</option>
+						<option value="small">Medium</option>
+						<option value="small">Large</option>
+					</select>
 				</div>
-				<!-- <div class="form-group">
-					<label for="userInput"
+				<div class="form-group">
+					<label for="userSize"
 						>Please enter the toppings you would like separate by a
 						comma:</label
 					>
-					<input id="userInput" type="text" />
-				</div> -->
+					<input id="userSize" type="text" />
+				</div>
+
 				<button type="submit" class="btn btn-success">Submit!</button>
 			</form>
 
