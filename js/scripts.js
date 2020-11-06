@@ -7,12 +7,14 @@ function Pizza(toppings, size) {
 Pizza.prototype.calcPizza = function (Pizza) {
 	let cost = 0;
 
-	if (this.size === 'Large') {
+	if (this.size === 'large') {
 		cost = 20;
-	} else if (this.size === 'Medium') {
+	} else if (this.size === 'medium') {
 		cost = 10;
-	} else if (this.size === 'Small') {
+	} else if (this.size === 'small') {
 		cost = 5;
+	} else {
+		return 0;
 	}
 
 	return cost;
@@ -20,15 +22,16 @@ Pizza.prototype.calcPizza = function (Pizza) {
 
 let userPizza = new Pizza();
 
-function domLogUserInput(userToppings, userSize) {
+function domLogUserInput(userToppings, userSize, cost) {
 	$('.userResultsDetail')
 		.empty()
 		.append(
 			'You ordered a ' +
-				userToppings +
-				' pizza with the following toppings: ' +
 				userSize +
-				''
+				' pizza with the following toppings: ' +
+				userToppings +
+				' and the charge for the pizza is : $' +
+				cost
 		);
 }
 
@@ -40,10 +43,12 @@ $(document).ready(function () {
 		let userToppings = $('#userToppings').val();
 		let userSize = $('#userSize').val();
 
-		domLogUserInput(userToppings, userSize);
-
 		userPizza.size = userSize;
 		userPizza.toppings = userToppings;
+
+		let cost = userPizza.calcPizza(userPizza);
+
+		domLogUserInput(userToppings, userSize, cost);
 
 		$('.userResults').show();
 	});
