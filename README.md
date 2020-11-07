@@ -1,6 +1,6 @@
 ## Fridays OOP Project
 
-\_#
+# This exciting application allows you to order pizzas and get a price estimate for the cost.
 
 By Austin Schrader\_
 
@@ -17,36 +17,18 @@ This project was created by Austin Schrader for the Friday project where we have
 
 ## Specs
 
-Describe: numberTo()
-Test: "It should append nothing if 0 is inputted"
-Expect(numberTo(0).toEqual([0]);
+Describe: calcPizza()
+Test: "It should output 20 if a large pizza is selected"
+Expect(calcPizza(userPizza.size="large").toEqual([20]);
 
-Test: "It should append 'Boop' if 1 is inputted"
-Expect(numberTo(1).toEqual([1]);
+Test: "It should output 20 if a medium pizza is selected"
+Expect(calcPizza(userPizza.size="medium").toEqual([10]);
 
-Test: "It should append 'Boop' if 911 is inputted"
-Expect(numberTo(911).toEqual([911]);
+Test: "It should output 20 if a small pizza is selected"
+Expect(calcPizza(userPizza.size="small").toEqual([5]);
 
-Test: "It should append 'Beep' if 2 is inputted"
-Expect(numberTo(2).toEqual([2]);
-
-Test: "It should append 'Boop' if 211 is inputted"
-Expect(numberTo(921).toEqual([922]);
-
-Test: "It should append 'Won't you be my neighbor?' if 3 is inputted"
-Expect(numberTo(3).toEqual([3]);
-
-Test: "It should append 'Boop' if 933 is inputted"
-Expect(numberTo(933).toEqual([933]);
-
-Test: "It should append 'Won't you be my neighbor?' if 13 is inputted"
-Expect(numberTo(3).toEqual([13]);
-
-Test: "It should append 'Won't you be my neighbor?' if 21 is inputted"
-Expect(numberTo(3).toEqual([21]);
-
-Test: "It should append 'Won't you be my neighbor?' if 32 is inputted"
-Expect(numberTo(3).toEqual([32]);
+Test: "It should output 0 if no pizza size was to be selected"
+Expect(calcPizza(userPizza.size="small").toEqual([0]);
 
 ## Known Bugs
 

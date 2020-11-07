@@ -6,3 +6,16 @@ body {
 .userResults {
 	display: none;
 }
+
+h1 {
+	color: #5887ff;
+}
+
+label,
+p {
+	color: #715aff;
+}
+
+button {
+	color: #a682ff;
+}
